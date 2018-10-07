@@ -7,20 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace ukmodul
 {
-    public partial class main : Form
+    public partial class rendelesForm : Form
     {
-        public main()
+        public rendelesForm()
         {
             InitializeComponent();
-        }
-
-        private void rendelésToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            rendelesForm rendForm = new rendelesForm();
-            rendForm.Show();
         }
     }
 }
