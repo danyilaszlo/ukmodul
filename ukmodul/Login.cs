@@ -34,6 +34,10 @@ namespace ukmodul
             {
                 MessageBox.Show("Hibás név vagy jelszó!");
                 txtUsername.Focus();
+<<<<<<< HEAD
+=======
+                //test
+>>>>>>> 4ee269eadd996c8e7d30e9fcc4e995846c9ea0ab
             }
         }
     }
