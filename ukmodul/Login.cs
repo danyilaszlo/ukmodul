@@ -20,10 +20,21 @@ namespace ukmodul
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            SqlConnection kapcs = new SqlConnection(@"Data Source = PC63\SQLEXPRESS; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
-            SqlDataAdapter sda = new SqlDataAdapter();
+            SqlConnection kapcs = new SqlConnection(@"Data Source=PC63\SQLEXPRESS;Initial Catalog=UKMODUL;Integrated Security=True");
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM felhasznalok WHERE felhaszn_nev = '"+ txtUsername.Text +"' AND passwd = '"+ txtPasswd.Text+"'", kapcs);
             DataTable dt = new DataTable();
             sda.Fill(dt);
+            if (dt.Rows.Count == 1)
+            {
+                this.Hide();
+                main frmMain = new main();
+                frmMain.Show();
+            }
+            else
+            {
+                MessageBox.Show("Hibás név vagy jelszó!");
+                txtUsername.Focus();
+            }
         }
     }
 }

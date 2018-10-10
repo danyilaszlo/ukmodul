@@ -66,32 +66,33 @@
             this.forgalomVevőreToolStripMenuItem,
             this.forgalomTermékreToolStripMenuItem});
             this.lekérdezésekToolStripMenuItem.Name = "lekérdezésekToolStripMenuItem";
-            this.lekérdezésekToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.lekérdezésekToolStripMenuItem.Size = new System.Drawing.Size(115, 25);
             this.lekérdezésekToolStripMenuItem.Text = "Lekérdezések";
             // 
             // korábbiRendeléseimToolStripMenuItem
             // 
             this.korábbiRendeléseimToolStripMenuItem.Name = "korábbiRendeléseimToolStripMenuItem";
-            this.korábbiRendeléseimToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.korábbiRendeléseimToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.korábbiRendeléseimToolStripMenuItem.Text = "Korábbi rendeléseim";
             // 
             // forgalomVevőreToolStripMenuItem
             // 
             this.forgalomVevőreToolStripMenuItem.Name = "forgalomVevőreToolStripMenuItem";
-            this.forgalomVevőreToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.forgalomVevőreToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.forgalomVevőreToolStripMenuItem.Text = "Forgalom vevőre";
             // 
             // forgalomTermékreToolStripMenuItem
             // 
             this.forgalomTermékreToolStripMenuItem.Name = "forgalomTermékreToolStripMenuItem";
-            this.forgalomTermékreToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.forgalomTermékreToolStripMenuItem.Size = new System.Drawing.Size(223, 26);
             this.forgalomTermékreToolStripMenuItem.Text = "Forgalom termékre";
             // 
             // kilépésToolStripMenuItem
             // 
             this.kilépésToolStripMenuItem.Name = "kilépésToolStripMenuItem";
-            this.kilépésToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.kilépésToolStripMenuItem.Size = new System.Drawing.Size(71, 25);
             this.kilépésToolStripMenuItem.Text = "Kilépés";
+            this.kilépésToolStripMenuItem.Click += new System.EventHandler(this.kilépésToolStripMenuItem_Click);
             // 
             // main
             // 
