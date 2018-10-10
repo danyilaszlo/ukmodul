@@ -14,9 +14,16 @@ namespace ukmodul
 {
     public partial class rendelesForm : Form
     {
+
+        
         public rendelesForm()
         {
             InitializeComponent();
+
+            
+
+
         }
+
     }
 }
