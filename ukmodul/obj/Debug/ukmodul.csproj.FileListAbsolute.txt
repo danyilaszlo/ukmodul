@@ -30,3 +30,15 @@ C:\Documents and Settings\dan\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul
 C:\Documents and Settings\dan\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.exe
 C:\Documents and Settings\dan\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.pdb
 C:\Documents and Settings\dan\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.rendelesForm.resources
+C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\bin\Debug\ukmodul.exe.config
+C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\bin\Debug\ukmodul.exe
+C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\bin\Debug\ukmodul.pdb
+C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.csprojResolveAssemblyReference.cache
+C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.frmLogin.resources
+C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.main.resources
+C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.Properties.Resources.resources
+C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.rendelesForm.resources
+C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.csproj.GenerateResource.Cache
+C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.csproj.CoreCompileInputs.cache
+C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.exe
+C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.pdb
