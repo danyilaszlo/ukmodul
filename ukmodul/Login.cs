@@ -17,10 +17,12 @@ namespace ukmodul
     public partial class frmLogin : Form
     {
 
-       // SqlConnection kapcs = new SqlConnection(@"Data Source=PC63\SQLEXPRESS;Initial Catalog=UKMODUL;Integrated Security=True");
+        
+        public static string kapcs_string = @"Data Source=PC63\SQLEXPRESS;Initial Catalog=UKMODUL;Integrated Security=True";
+
+        //   SqlConnection kapcs = new SqlConnection(@"Data Source=HPELITEBOOK\SQLEXPRESS;Initial Catalog=UKMODUL;Persist Security Info=True;User ID=sa;Password=SqlAdmin1");
 
 
-          SqlConnection kapcs = new SqlConnection(@"Data Source=HPELITEBOOK\SQLEXPRESS;Initial Catalog=UKMODUL;Persist Security Info=True;User ID=sa;Password=SqlAdmin1");
 
         public frmLogin()
         {
@@ -29,7 +31,8 @@ namespace ukmodul
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
- 
+
+            SqlConnection kapcs = new SqlConnection(kapcs_string);
             SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM felhasznalok WHERE felhaszn_nev = '"+ txtUsername.Text +"' AND passwd = '"+ txtPasswd.Text+"'", kapcs);
             DataTable dt = new DataTable();
             sda.Fill(dt);

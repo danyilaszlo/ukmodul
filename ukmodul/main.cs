@@ -21,6 +21,12 @@ namespace ukmodul
         {
             rendelesForm rendForm = new rendelesForm();
             rendForm.Show();
+
+
+
+
+
+
         }
 
         private void kilépésToolStripMenuItem_Click(object sender, EventArgs e)
