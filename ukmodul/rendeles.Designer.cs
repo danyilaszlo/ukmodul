@@ -129,10 +129,10 @@
             this.Column7});
             this.dgviewRendeles.Location = new System.Drawing.Point(12, 134);
             this.dgviewRendeles.Name = "dgviewRendeles";
-            this.dgviewRendeles.ReadOnly = true;
             this.dgviewRendeles.Size = new System.Drawing.Size(1247, 526);
             this.dgviewRendeles.TabIndex = 7;
-            this.dgviewRendeles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+//            this.dgviewRendeles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgviewRendeles.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgviewRendeles_KeyDown);
             // 
             // Column1
             // 
