@@ -50,5 +50,18 @@ namespace ukmodul
 
             }
         }
+
+        private void txtPasswd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPasswd_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
+        }
     }
 }

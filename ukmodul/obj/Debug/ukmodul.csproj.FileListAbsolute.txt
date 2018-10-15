@@ -22,7 +22,6 @@ C:\Users\dan\Desktop\szakdolgozat\ukmodul\ukmodul\obj\Debug\ukmodul.pdb
 C:\Documents and Settings\dan\Documents\GitHub\ukmodul\ukmodul\bin\Debug\ukmodul.exe.config
 C:\Documents and Settings\dan\Documents\GitHub\ukmodul\ukmodul\bin\Debug\ukmodul.exe
 C:\Documents and Settings\dan\Documents\GitHub\ukmodul\ukmodul\bin\Debug\ukmodul.pdb
-C:\Documents and Settings\dan\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.csprojResolveAssemblyReference.cache
 C:\Documents and Settings\dan\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.frmLogin.resources
 C:\Documents and Settings\dan\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.main.resources
 C:\Documents and Settings\dan\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.Properties.Resources.resources
@@ -42,3 +41,4 @@ C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.csproj.
 C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.csproj.CoreCompileInputs.cache
 C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.exe
 C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.pdb
+C:\Documents and Settings\dan\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.csprojResolveAssemblyReference.cache
