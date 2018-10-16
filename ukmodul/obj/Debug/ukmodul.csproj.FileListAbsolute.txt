@@ -41,6 +41,4 @@ C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.csproj.
 C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.exe
 C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.pdb
 C:\Documents and Settings\dan\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.csprojResolveAssemblyReference.cache
-C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\bin\Debug\ukmodul.exe.CodeAnalysisLog.xml
-C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\bin\Debug\ukmodul.exe.lastcodeanalysissucceeded
 C:\Users\danyi.laszlo\Documents\GitHub\ukmodul\ukmodul\obj\Debug\ukmodul.csprojResolveAssemblyReference.cache

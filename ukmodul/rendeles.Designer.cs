@@ -41,8 +41,12 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgviewRendeles)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,13 +129,13 @@
             this.Column3,
             this.Column4,
             this.Column5,
+            this.Column8,
             this.Column6,
             this.Column7});
             this.dgviewRendeles.Location = new System.Drawing.Point(12, 134);
             this.dgviewRendeles.Name = "dgviewRendeles";
             this.dgviewRendeles.Size = new System.Drawing.Size(1247, 526);
             this.dgviewRendeles.TabIndex = 7;
-//            this.dgviewRendeles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dgviewRendeles.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgviewRendeles_KeyDown);
             // 
             // Column1
@@ -148,7 +152,6 @@
             this.Column2.FillWeight = 355.3299F;
             this.Column2.HeaderText = "Termék neve";
             this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Column3
@@ -156,7 +159,6 @@
             this.Column3.FillWeight = 60.70308F;
             this.Column3.HeaderText = "Mennyiség";
             this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
             this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Column4
@@ -175,6 +177,11 @@
             this.Column5.ReadOnly = true;
             this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Készlet";
+            this.Column8.Name = "Column8";
+            // 
             // Column6
             // 
             this.Column6.FillWeight = 60.70308F;
@@ -191,11 +198,44 @@
             this.Column7.ReadOnly = true;
             this.Column7.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(617, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(158, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Keresés eredménye: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(614, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(252, 20);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Datagridview-ból a keresett string: ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(618, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(126, 20);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Talált rekord db: ";
+            // 
             // rendelesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1271, 739);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgviewRendeles);
             this.Controls.Add(this.txtCim);
             this.Controls.Add(this.labelCim);
@@ -227,12 +267,16 @@
         private System.Windows.Forms.Label labelCim;
         private System.Windows.Forms.TextBox txtCim;
         private System.Windows.Forms.DataGridView dgviewRendeles;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
