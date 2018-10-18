@@ -134,6 +134,7 @@
             this.Column7});
             this.dgviewRendeles.Location = new System.Drawing.Point(12, 134);
             this.dgviewRendeles.Name = "dgviewRendeles";
+            this.dgviewRendeles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgviewRendeles.Size = new System.Drawing.Size(1247, 526);
             this.dgviewRendeles.TabIndex = 7;
             this.dgviewRendeles.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgviewRendeles_KeyDown);

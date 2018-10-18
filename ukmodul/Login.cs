@@ -18,9 +18,9 @@ namespace ukmodul
     {
 
         
-        public static string kapcs_string = @"Data Source=PC63\SQLEXPRESS;Initial Catalog=UKMODUL;Integrated Security=True";
+        //public static string kapcs_string = @"Data Source=PC63\SQLEXPRESS;Initial Catalog=UKMODUL;Integrated Security=True";
 
-        //public static string kapcs_string = @"Data Source=HPELITEBOOK\SQLEXPRESS;Initial Catalog=UKMODUL;Persist Security Info=True;User ID=sa;Password=SqlAdmin1";
+        public static string kapcs_string = @"Data Source=HPELITEBOOK\SQLEXPRESS;Initial Catalog=UKMODUL;Persist Security Info=True;User ID=sa;Password=SqlAdmin1";
 
 
 
