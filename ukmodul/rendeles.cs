@@ -41,16 +41,9 @@ namespace ukmodul
                 cmboxVevonev.Items.Add(dr["vevo_nev"].ToString());
             }
             kapcs.Close();
+
             dgviewRendelesInit();
 
-
-
-
-
-
-
-
-            //dgviewRendeles.Rows[0].Cells[0].Value = "v121212";
         }
 
 
@@ -88,51 +81,74 @@ namespace ukmodul
             kapcs.Close();
         }
 
-            
         private void dgviewRendeles_KeyDown(object sender, KeyEventArgs e)
+        { }
+
+        private void cikk_betoltes(ArrayList arrayList, object al)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void dgviewRendeles_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            
-            //void cikk_betoltes(ArrayList dgv_row)
-            //{
-
-
-
-            //}
-
-            if (dgviewRendeles.CurrentCell.ColumnIndex == 1 && e.KeyData == Keys.Enter)
+  
+            if (dgviewRendeles.CurrentCell.ColumnIndex == 1 && e.KeyChar == (char)Keys.Enter)
             {
+  
+//                label2.Text = "Datagridview-ból a keresett string: " + dgviewRendeles.CurrentCell.Value.ToString();
 
-                //string row_num = dgviewRendeles.CurrentCell.RowIndex.ToString();
+                MessageBox.Show("keresett string: "dgviewRendeles.CurrentCell.Value.ToString());
 
-                e.Handled = true;
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM cikkek WHERE cikk_nev LIKE '" + dgviewRendeles.CurrentCell.Value.ToString() + "'", kapcs);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
 
-                label2.Text = "Datagridview-ból a keresett string: " + dgviewRendeles.CurrentCell.Value.ToString();
-
-
-
-                kapcs.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM cikkek WHERE cikk_nev LIKE '" + dgviewRendeles.CurrentCell.Value.ToString() + "' ", kapcs);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.Read())
+                DataRow dr ;
+                if (dt.Rows.Count == 1)
                 {
-                    //int column_num = dgviewRendeles.CurrentCell.ColumnIndex;
+                    
+                    int column_num = dgviewRendeles.CurrentCell.ColumnIndex;
                     int row_num = dgviewRendeles.CurrentCell.RowIndex;
+                    MessageBox.Show("egy találat van, " + "oszlop: " + column_num + " , sor: " + row_num );
+                    dr = dt.Rows[0];
+                    
+                    dgviewRendeles.Rows[row_num].Cells["cikk_id"].Value = dr["cikk_id"].ToString(); 
+                    dgviewRendeles.CurrentCell.Value = dr["cikk_nev"];
+                    dgviewRendeles.Rows[row_num].Cells["me"].Value = dr["me"].ToString();
+                    dgviewRendeles.Rows[row_num].Cells["netto_ar"].Value = dr["netto_ar"].ToString();
+                    dgviewRendeles.Rows[row_num].Cells["keszlet"].Value = dr["keszlet"].ToString();
 
-
-                    dgviewRendeles.Rows[row_num].Cells[1].Value = (string)dr["vevo_id"].ToString();
-
-                    //txtCim.Text = (string)dr["ir_szam"].ToString() + ", " + (string)dr["telepules_nev"].ToString() + ", " + (string)dr["cim"].ToString();
                 }
                 else
                 {
-                    txtKod.Text = "nincs adat";
+                    MessageBox.Show(dt.Rows.Count + " találat van");
+
                 }
-                kapcs.Close();
 
+                e.Handled = true;
 
+                //kapcs.Open();
+                //SqlCommand cmd = new SqlCommand("SELECT * FROM cikkek WHERE cikk_nev LIKE '" + dgviewRendeles.CurrentCell.Value.ToString() + "' ", kapcs);
+                //SqlDataReader dr = cmd.ExecuteReader();
+                //if (dr.Read())
+                //{
+                //    int column_num = dgviewRendeles.CurrentCell.ColumnIndex;
+                //    int row_num = dgviewRendeles.CurrentCell.RowIndex;
 
+                //    dgvPoz.Text = "dgvPoz pozíció, oszlop: " + column_num.ToString() + ", " + row_num.ToString();
 
+                //    label1.Text = dr["vevo_id"].ToString();
+                //    dgviewRendeles.Rows[row_num].Cells[1].Value = (string)dr["vevo_id"].ToString();
+
+                //    MessageBox.Show("IF ág...");
+
+                //}
+                //else
+                //{
+                //    MessageBox.Show("nincs adat");
+                //}
+                //kapcs.Close();
 
                 //SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM cikkek WHERE cikk_nev LIKE '" + dgviewRendeles.CurrentCell.Value.ToString() + "' ", kapcs);
                 //DataTable dt = new DataTable();
@@ -148,8 +164,6 @@ namespace ukmodul
                 //    // a talált cikk adatait betölteni a datagridview-ba
 
                 //    dgviewRendeles.Rows[0].Cells[0].Value = "v121212"; //dr.ToString();
-
-
 
                 //    //foreach (DataRow dr in dt.Rows)
                 //    //{
@@ -187,11 +201,9 @@ namespace ukmodul
             }
 
 
-        }
 
-        private void cikk_betoltes(ArrayList arrayList, object al)
-        {
-            throw new NotImplementedException();
+
+
         }
     }
 }

@@ -82,7 +82,6 @@
             this.txtPasswd.PasswordChar = '*';
             this.txtPasswd.Size = new System.Drawing.Size(159, 26);
             this.txtPasswd.TabIndex = 4;
-            this.txtPasswd.TextChanged += new System.EventHandler(this.txtPasswd_TextChanged);
             this.txtPasswd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPasswd_KeyDown);
             // 
             // frmLogin
