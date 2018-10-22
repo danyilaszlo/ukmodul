@@ -136,6 +136,7 @@
     <value>True</value>
   </metadata>
   <metadata name="netto_ertek.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+<<<<<<< HEAD
     <value>True</value>
   </metadata>
   <metadata name="brutto_ertek.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -163,6 +164,15 @@
     <value>True</value>
   </metadata>
   <metadata name="brutto_ertek.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+=======
+    <value>True</value>
+  </metadata>
+<<<<<<< HEAD
+  <metadata name="Column7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+=======
+  <metadata name="brutto_ertek.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+>>>>>>> 178d11ace346d9fcbc4743c70dd4673f89a3b077
+>>>>>>> 25e7366ae6fb7ebefdf462fe4ee78038a64d8dd0
     <value>True</value>
   </metadata>
 </root>

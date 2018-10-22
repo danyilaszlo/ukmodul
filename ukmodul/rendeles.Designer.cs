@@ -35,6 +35,7 @@
             this.btnVevok = new System.Windows.Forms.Button();
             this.labelCim = new System.Windows.Forms.Label();
             this.txtCim = new System.Windows.Forms.TextBox();
+<<<<<<< HEAD
             this.dgvRendeles = new System.Windows.Forms.DataGridView();
             this.cikk_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cikk_nev = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +45,9 @@
             this.keszlet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.netto_ertek = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.brutto_ertek = new System.Windows.Forms.DataGridViewTextBoxColumn();
+=======
+            this.dgviewRendeles = new System.Windows.Forms.DataGridView();
+>>>>>>> 25e7366ae6fb7ebefdf462fe4ee78038a64d8dd0
             this.label1 = new System.Windows.Forms.Label();
             this.lblSzallDat = new System.Windows.Forms.Label();
             this.lblAzonosito = new System.Windows.Forms.Label();
@@ -54,6 +58,7 @@
             this.txtRogzDat = new System.Windows.Forms.TextBox();
             this.lblTetelmegjegyzes = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSorTorles = new System.Windows.Forms.Button();
@@ -65,6 +70,19 @@
             this.lblNettoOssz = new System.Windows.Forms.Label();
             this.lblBruttoOssz = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRendeles)).BeginInit();
+=======
+            this.label3 = new System.Windows.Forms.Label();
+            this.dgvPoz = new System.Windows.Forms.Label();
+            this.cikk_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cikk_nev = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rend_menny = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.me = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.netto_ar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.keszlet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.netto_ertek = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brutto_ertek = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgviewRendeles)).BeginInit();
+>>>>>>> 25e7366ae6fb7ebefdf462fe4ee78038a64d8dd0
             this.SuspendLayout();
             // 
             // labelKod
@@ -134,6 +152,7 @@
             this.txtCim.Size = new System.Drawing.Size(493, 26);
             this.txtCim.TabIndex = 6;
             // 
+<<<<<<< HEAD
             // dgvRendeles
             // 
             this.dgvRendeles.AllowUserToAddRows = false;
@@ -141,6 +160,15 @@
             this.dgvRendeles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRendeles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRendeles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+=======
+            // dgviewRendeles
+            // 
+            this.dgviewRendeles.AllowUserToAddRows = false;
+            this.dgviewRendeles.AllowUserToDeleteRows = false;
+            this.dgviewRendeles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgviewRendeles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgviewRendeles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+>>>>>>> 25e7366ae6fb7ebefdf462fe4ee78038a64d8dd0
             this.cikk_id,
             this.cikk_nev,
             this.rend_menny,
@@ -149,6 +177,7 @@
             this.keszlet,
             this.netto_ertek,
             this.brutto_ertek});
+<<<<<<< HEAD
             this.dgvRendeles.Location = new System.Drawing.Point(12, 113);
             this.dgvRendeles.Name = "dgvRendeles";
             this.dgvRendeles.Size = new System.Drawing.Size(1247, 547);
@@ -217,12 +246,29 @@
             this.brutto_ertek.Name = "brutto_ertek";
             this.brutto_ertek.ReadOnly = true;
             this.brutto_ertek.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+=======
+            this.dgviewRendeles.Location = new System.Drawing.Point(12, 113);
+            this.dgviewRendeles.Name = "dgviewRendeles";
+<<<<<<< HEAD
+            this.dgviewRendeles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgviewRendeles.Size = new System.Drawing.Size(1247, 526);
+=======
+            this.dgviewRendeles.Size = new System.Drawing.Size(1247, 547);
+>>>>>>> 178d11ace346d9fcbc4743c70dd4673f89a3b077
+            this.dgviewRendeles.TabIndex = 7;
+            this.dgviewRendeles.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgviewRendeles_KeyDown);
+            this.dgviewRendeles.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgviewRendeles_KeyPress);
+>>>>>>> 25e7366ae6fb7ebefdf462fe4ee78038a64d8dd0
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+<<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(647, 21);
+=======
+            this.label1.Location = new System.Drawing.Point(594, 71);
+>>>>>>> 25e7366ae6fb7ebefdf462fe4ee78038a64d8dd0
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 20);
             this.label1.TabIndex = 8;
@@ -306,6 +352,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+<<<<<<< HEAD
             this.label2.Location = new System.Drawing.Point(12, 713);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 20);
@@ -404,11 +451,99 @@
             this.lblBruttoOssz.Size = new System.Drawing.Size(97, 20);
             this.lblBruttoOssz.TabIndex = 27;
             this.lblBruttoOssz.Text = "Bruttó érték:";
+=======
+            this.label2.Location = new System.Drawing.Point(591, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(252, 20);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Datagridview-ból a keresett string: ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(595, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(126, 20);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Talált rekord db: ";
+>>>>>>> 25e7366ae6fb7ebefdf462fe4ee78038a64d8dd0
+            // 
+            // dgvPoz
+            // 
+            this.dgvPoz.AutoSize = true;
+            this.dgvPoz.Location = new System.Drawing.Point(949, 76);
+            this.dgvPoz.Name = "dgvPoz";
+            this.dgvPoz.Size = new System.Drawing.Size(69, 13);
+            this.dgvPoz.TabIndex = 10;
+            this.dgvPoz.Text = "dgv pozíció: ";
+            // 
+            // cikk_id
+            // 
+            this.cikk_id.DataPropertyName = "cikk_id";
+            this.cikk_id.FillWeight = 41.15464F;
+            this.cikk_id.HeaderText = "Cikkszám";
+            this.cikk_id.Name = "cikk_id";
+            this.cikk_id.ReadOnly = true;
+            this.cikk_id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // cikk_nev
+            // 
+            this.cikk_nev.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cikk_nev.FillWeight = 355.3299F;
+            this.cikk_nev.HeaderText = "Termék neve";
+            this.cikk_nev.Name = "cikk_nev";
+            this.cikk_nev.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // rend_menny
+            // 
+            this.rend_menny.FillWeight = 60.70308F;
+            this.rend_menny.HeaderText = "Mennyiség";
+            this.rend_menny.Name = "rend_menny";
+            this.rend_menny.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // me
+            // 
+            this.me.FillWeight = 60.70308F;
+            this.me.HeaderText = "ME";
+            this.me.Name = "me";
+            this.me.ReadOnly = true;
+            this.me.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // netto_ar
+            // 
+            this.netto_ar.FillWeight = 60.70308F;
+            this.netto_ar.HeaderText = "Egységár";
+            this.netto_ar.Name = "netto_ar";
+            this.netto_ar.ReadOnly = true;
+            this.netto_ar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // keszlet
+            // 
+            this.keszlet.HeaderText = "Készlet";
+            this.keszlet.Name = "keszlet";
+            // 
+            // netto_ertek
+            // 
+            this.netto_ertek.FillWeight = 60.70308F;
+            this.netto_ertek.HeaderText = "Nettó érték";
+            this.netto_ertek.Name = "netto_ertek";
+            this.netto_ertek.ReadOnly = true;
+            this.netto_ertek.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // brutto_ertek
+            // 
+            this.brutto_ertek.FillWeight = 60.70308F;
+            this.brutto_ertek.HeaderText = "Bruttó érték";
+            this.brutto_ertek.Name = "brutto_ertek";
+            this.brutto_ertek.ReadOnly = true;
+            this.brutto_ertek.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // rendelesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1271, 825);
             this.Controls.Add(this.lblBruttoOssz);
             this.Controls.Add(this.lblNettoOssz);
@@ -420,6 +555,11 @@
             this.Controls.Add(this.btnSorTorles);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
+=======
+            this.ClientSize = new System.Drawing.Size(1271, 739);
+            this.Controls.Add(this.dgvPoz);
+            this.Controls.Add(this.label3);
+>>>>>>> 25e7366ae6fb7ebefdf462fe4ee78038a64d8dd0
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTetelmegjegyzes);
             this.Controls.Add(this.txtRogzDat);
@@ -470,6 +610,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn netto_ertek;
         private System.Windows.Forms.DataGridViewTextBoxColumn brutto_ertek;
         private System.Windows.Forms.Label label1;
+<<<<<<< HEAD
         private System.Windows.Forms.Label lblSzallDat;
         private System.Windows.Forms.Label lblAzonosito;
         private System.Windows.Forms.Label lblRogzDat;
@@ -489,5 +630,18 @@
         private System.Windows.Forms.TextBox txtBruttoOssz;
         private System.Windows.Forms.Label lblNettoOssz;
         private System.Windows.Forms.Label lblBruttoOssz;
+=======
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label dgvPoz;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cikk_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cikk_nev;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rend_menny;
+        private System.Windows.Forms.DataGridViewTextBoxColumn me;
+        private System.Windows.Forms.DataGridViewTextBoxColumn netto_ar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn keszlet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn netto_ertek;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brutto_ertek;
+>>>>>>> 25e7366ae6fb7ebefdf462fe4ee78038a64d8dd0
     }
 }
