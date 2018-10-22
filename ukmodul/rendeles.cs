@@ -16,21 +16,29 @@ namespace ukmodul
 {
     public partial class rendelesForm : Form
     {
-         public static SqlConnection kapcs = new SqlConnection(@"Data Source=PC63\SQLEXPRESS;Initial Catalog=UKMODUL;Integrated Security=True");
-        //public static SqlConnection kapcs = new SqlConnection(@"Data Source=HPELITEBOOK\SQLEXPRESS;Initial Catalog=UKMODUL;Persist Security Info=True;User ID=sa;Password=SqlAdmin1");
+        //public static SqlConnection kapcs = new SqlConnection(@"Data Source=PC63\SQLEXPRESS;Initial Catalog=UKMODUL;Integrated Security=True");
+        public static SqlConnection kapcs = new SqlConnection(@"Data Source=HPELITEBOOK\SQLEXPRESS;Initial Catalog=UKMODUL;Persist Security Info=True;User ID=sa;Password=SqlAdmin1");
 
-
+        int column_index, row_index;
+        int netto, brutto;
+        int netto_ossz = 0, brutto_ossz = 0;
+        int afa_kulcs = 0;
+        DataRow dr;
 
         public rendelesForm()
         {
             InitializeComponent();
-
         }
 
-
- 
+        /// <summary>
+        /// A vevő kiválasztásához feltölti adatokkal a combobox-ot
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rendelesForm_Load(object sender, EventArgs e)
         {
+
+            txtRogzDat.Text = DateTime.Today.ToString("yyyy/MM/dd");
 
             kapcs.Open();
             SqlDataAdapter sda = new SqlDataAdapter("SELECT vevo_nev FROM vevok", kapcs);
@@ -42,29 +50,35 @@ namespace ukmodul
             }
             kapcs.Close();
             dgviewRendelesInit();
-
-
-
-
-
-
-
-
-            //dgviewRendeles.Rows[0].Cells[0].Value = "v121212";
         }
-
-
 
         /// <summary>
         /// Az első sort egy üres sorral tölti fel a datagridview-be
         /// </summary>
         private void dgviewRendelesInit()
         {
-            ArrayList row = new ArrayList();
-            row.Add("");
-            dgviewRendeles.Rows.Add(row.ToArray());
-        }
+            // ArrayList row = new ArrayList();
+            //row.Add();
+            //dgvRendeles.Rows.Add(row.ToArray());
 
+            dgvRendeles.Rows.Add();
+            row_index = dgvRendeles.CurrentCell.RowIndex;
+            dgvRendeles.Rows[row_index].Cells["cikk_id"].Value = "";
+            dgvRendeles.Rows[row_index].Cells["cikk_nev"].Value = "";
+            dgvRendeles.Rows[row_index].Cells["me"].Value = "";
+            dgvRendeles.Rows[row_index].Cells["netto_ar"].Value = "";
+            dgvRendeles.Rows[row_index].Cells["keszlet"].Value = "";
+
+
+
+            dgvRendeles.CurrentCell = dgvRendeles[1, dgvRendeles.RowCount - 1];
+
+
+//            row_index = dgvRendeles.CurrentCell.RowIndex;
+            
+
+
+        }
 
         /// <summary>
         /// A comboboxban kiválasztott vevők adatait tölti be a kód és cím textboxokba
@@ -74,7 +88,7 @@ namespace ukmodul
         private void cmboxVevonev_SelectedIndexChanged(object sender, EventArgs e)
         {
             kapcs.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM vevok WHERE vevo_nev= '"+ cmboxVevonev.Text +"'", kapcs);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM vevok WHERE vevo_nev= '" + cmboxVevonev.Text + "'", kapcs);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
@@ -88,110 +102,117 @@ namespace ukmodul
             kapcs.Close();
         }
 
-            
-        private void dgviewRendeles_KeyDown(object sender, KeyEventArgs e)
+        /// <summary>
+        /// Rendelés form bezárása
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnCancel_Click(object sender, EventArgs e)
         {
+            Close();
+        }
 
-            
-            //void cikk_betoltes(ArrayList dgv_row)
-            //{
+        /// <summary>
+        /// A kiválasztott termék adatainak betöltése a dgvRendelés aktuális sorába
+        /// </summary>
+        /// <param name="arrayList"></param>
+        /// <param name="al"></param>
+        private void cikk_betoltes()
+        {
+            dgvRendeles.Rows[row_index].Cells["cikk_id"].Value = dr["cikk_id"].ToString();
+            dgvRendeles.Rows[row_index].Cells["cikk_nev"].Value = dr["cikk_nev"];
+            dgvRendeles.Rows[row_index].Cells["me"].Value = dr["me"].ToString();
+            dgvRendeles.Rows[row_index].Cells["netto_ar"].Value = dr["netto_ar"].ToString();
+            dgvRendeles.Rows[row_index].Cells["keszlet"].Value = dr["keszlet"].ToString();
+ 
 
+        }
 
+        /// <summary>
+        /// Termék keresés indítása: ha ("Enter"-t nyomott és "cikk_nev" cellában áll a kurzor)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dgviewRendeles_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            column_index = dgvRendeles.CurrentCell.ColumnIndex;
+            row_index = dgvRendeles.CurrentCell.RowIndex;
 
-            //}
-
-            if (dgviewRendeles.CurrentCell.ColumnIndex == 1 && e.KeyData == Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter && dgvRendeles.CurrentCell.Value.ToString() != "")
             {
-
-                //string row_num = dgviewRendeles.CurrentCell.RowIndex.ToString();
-
-                e.Handled = true;
-
-                label2.Text = "Datagridview-ból a keresett string: " + dgviewRendeles.CurrentCell.Value.ToString();
-
-
-
-                kapcs.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM cikkek WHERE cikk_nev LIKE '" + dgviewRendeles.CurrentCell.Value.ToString() + "' ", kapcs);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.Read())
+                if (dgvRendeles.CurrentCell.ColumnIndex == 1)
                 {
-                    //int column_num = dgviewRendeles.CurrentCell.ColumnIndex;
-                    int row_num = dgviewRendeles.CurrentCell.RowIndex;
+                    SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM cikkek WHERE cikk_nev LIKE '" + dgvRendeles.CurrentCell.Value.ToString() + "'", kapcs);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
 
+                    MessageBox.Show(dt.Rows.Count + " találat van, " + "oszlop: " + column_index + " , sor: " + row_index);
 
-                    dgviewRendeles.Rows[row_num].Cells[1].Value = (string)dr["vevo_id"].ToString();
+                    if (dt.Rows.Count == 1)
+                    {
+                        dr = dt.Rows[0];
+                        cikk_betoltes();
+                        dgvRendeles.CurrentCell = dgvRendeles[column_index + 1, row_index];
+                    }
+                    else if (dt.Rows.Count > 1)
+                            {
+                                selectCikkForm selectCikkFrm = new selectCikkForm();
+                                selectCikkFrm.Show();
 
-                    //txtCim.Text = (string)dr["ir_szam"].ToString() + ", " + (string)dr["telepules_nev"].ToString() + ", " + (string)dr["cim"].ToString();
+                                //....
+
+                                //dgvRendeles.CurrentCell = dgvRendeles[column_index + 1, row_index];
+                            }
+                            else
+                            {
+                                MessageBox.Show("Nincs ilyen termék");
+                            }
+
+                    e.Handled = true;
                 }
-                else
-                {
-                    txtKod.Text = "nincs adat";
+                else if (dgvRendeles.CurrentCell.ColumnIndex == 2)
+                        {
+
+                    // dr indexet beállítani, mert most mindig 0
+                   // MessageBox.Show("switch ág...");
+
+                            netto = Convert.ToInt32(dr["netto_ar"]) * Convert.ToInt32(dgvRendeles.Rows[dgvRendeles.CurrentCell.RowIndex].Cells["rend_menny"].Value);
+
+                            switch (dr["afa"])
+                            {
+                                case "K27":
+                                    afa_kulcs = 27;
+                                    break;
+                                case "K18":
+                                    afa_kulcs = 18;
+                                    break;
+                                case "K05":
+                                    afa_kulcs = 5;
+                                    break;
+                            }
+
+                            brutto = netto + ((netto * afa_kulcs) / 100);
+                            dgvRendeles.Rows[dgvRendeles.CurrentCell.RowIndex].Cells["netto_ertek"].Value = netto.ToString();
+                            dgvRendeles.Rows[dgvRendeles.CurrentCell.RowIndex].Cells["brutto_ertek"].Value = brutto.ToString();
+                            Osszesites();
+                            dgvRendeles[1, dgvRendeles.CurrentCell.RowIndex].ReadOnly = true;
+                            dgviewRendelesInit();
+
                 }
-                kapcs.Close();
-
-
-
-
-
-                //SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM cikkek WHERE cikk_nev LIKE '" + dgviewRendeles.CurrentCell.Value.ToString() + "' ", kapcs);
-                //DataTable dt = new DataTable();
-                //sda.Fill(dt);
-
-                //label3.Text = "Talált rekord db: " + dt.Rows.Count.ToString();
-
-                //if (dt.Rows.Count == 1)
-                //{
-
-                //    label1.Text = "Keresés eredménye: " + dt.Rows[0].ToString();
-
-                //    // a talált cikk adatait betölteni a datagridview-ba
-
-                //    dgviewRendeles.Rows[0].Cells[0].Value = "v121212"; //dr.ToString();
-
-
-
-                //    //foreach (DataRow dr in dt.Rows)
-                //    //{
-                //    //    dgviewRendeles.Rows[0].Cells[0].Value = "v121212" //dr.ToString();
-
-                //    //}
-
-
-                //    // ArrayList al = new ArrayList();
-
-                //    //al.Add(dt.Rows[0].["cikk_id"].toString());
-                //    //al.Add(dt.Rows[1]);
-                //    //al.Add("");
-                //    //al.Add(dt.Rows[2]);
-                //    //al.Add(dt.Rows[3]);
-                //    //al.Add(dt.Rows[6]);
-                //    //al.Add("0");
-                //    //al.Add("0");
-
-                //    //cikk_betoltes(al);
-
-
-                //}
-                //else if (dt.Rows.Count > 1)
-                //     {
-
-                //            // új modal ablak a talált rekordok listájával, nyilakkal, enterrel cikket lehet választani ami betöltődik a datagridview-ba
-
-                //     }
-                //     else
-                //     {
-                //         MessageBox.Show("Nincs ilyen termék!");
-                //     }
-
             }
 
-
         }
 
-        private void cikk_betoltes(ArrayList arrayList, object al)
+
+        private void Osszesites()
         {
-            throw new NotImplementedException();
+            netto_ossz += netto;
+            brutto_ossz += brutto;
+
+            txtNettoOssz.Text = netto_ossz.ToString();
+            txtBruttoOssz.Text = brutto_ossz.ToString();
+
         }
+
     }
 }

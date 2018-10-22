@@ -18,15 +18,16 @@ namespace ukmodul
     {
 
         
-        public static string kapcs_string = @"Data Source=PC63\SQLEXPRESS;Initial Catalog=UKMODUL;Integrated Security=True";
+        //public static string kapcs_string = @"Data Source=PC63\SQLEXPRESS;Initial Catalog=UKMODUL;Integrated Security=True";
 
-        //public static string kapcs_string = @"Data Source=HPELITEBOOK\SQLEXPRESS;Initial Catalog=UKMODUL;Persist Security Info=True;User ID=sa;Password=SqlAdmin1";
+        public static string kapcs_string = @"Data Source=HPELITEBOOK\SQLEXPRESS;Initial Catalog=UKMODUL;Persist Security Info=True;User ID=sa;Password=SqlAdmin1";
 
 
 
         public frmLogin()
         {
             InitializeComponent();
+            txtUsername.Focus();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -46,14 +47,8 @@ namespace ukmodul
             {
                 MessageBox.Show("Hibás név vagy jelszó!");
                 txtUsername.Focus();
-                
-
+  
             }
-        }
-
-        private void txtPasswd_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void txtPasswd_KeyDown(object sender, KeyEventArgs e)
